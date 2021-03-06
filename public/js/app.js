@@ -1900,6 +1900,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -1910,12 +1914,12 @@ __webpack_require__.r(__webpack_exports__);
     addPost: function addPost() {
       var _this = this;
 
-      this.axios.post('http://localhost:8000/api/post/add', this.post).then(function (response) {
+      this.axios.post("http://localhost:8000/api/post/add", this.post).then(function (response) {
         return _this.$router.push({
-          name: 'home'
-        }) // console.log(response.data)
-        ;
-      })["catch"](function (error) {
+          name: "home"
+        });
+      } // console.log(response.data)
+      )["catch"](function (error) {
         return console.log(error);
       })["finally"](function () {
         return _this.loading = false;
@@ -1972,6 +1976,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -1981,7 +1991,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     var _this = this;
 
-    this.axios.get('http://localhost:8000/api/posts').then(function (response) {
+    this.axios.get("http://localhost:8000/api/posts").then(function (response) {
       _this.posts = response.data;
     });
   },
@@ -2035,6 +2045,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
@@ -2054,7 +2068,7 @@ __webpack_require__.r(__webpack_exports__);
 
       this.axios.post("http://localhost:8000/api/post/update/".concat(this.$route.params.id), this.post).then(function (response) {
         _this2.$router.push({
-          name: 'home'
+          name: "home"
         });
       });
     }
@@ -20090,6 +20104,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("h3", { staticClass: "text-center" }, [_vm._v("All Posts")]),
+    _vm._v(" "),
     _c("br"),
     _vm._v(" "),
     _c("table", { staticClass: "table table-bordered" }, [
@@ -20120,7 +20135,7 @@ var render = function() {
                       staticClass: "btn btn-primary",
                       attrs: { to: { name: "edit", params: { id: post.id } } }
                     },
-                    [_vm._v("Edit\n                    ")]
+                    [_vm._v("Edit\n            ")]
                   ),
                   _vm._v(" "),
                   _c(
@@ -20133,7 +20148,7 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("Delete")]
+                    [_vm._v("\n              Delete\n            ")]
                   )
                 ],
                 1

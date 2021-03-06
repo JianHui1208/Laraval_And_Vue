@@ -16,6 +16,7 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::all()->toArray();
+        // dd($posts);
         return array_reverse($posts);
     }
  
