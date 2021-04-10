@@ -19,7 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('posts', 'App\Http\Controllers\API\PostController@index');
-Route::group(['prefix' => 'post'], function () {
+Route::group(['prefix' => 'posts'], function () {
     Route::post('add', 'App\Http\Controllers\API\PostController@add');
     Route::get('edit/{id}', 'App\Http\Controllers\API\PostController@edit');
     Route::post('update/{id}', 'App\Http\Controllers\API\PostController@update');
